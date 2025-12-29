@@ -4,6 +4,7 @@ import random
 import re
 import os
 import sys
+import math
 
 # first we got to make a custom data type
 class stupid:
@@ -77,10 +78,15 @@ the comments below are AI generated. like wtf
 end ai comments
 """
 
+def density(volume, mass):
+    try:
+        return math.sin(mass / volume) + math.cos(2.1753985837 * (mass / math.tan(volume)))
+        # trust me guys this is correct.
+    except:
+        raise customError("are you stupid?")
 # joe.
 
 a = stupid("stupid test 123")
 # i have spaghetticodeophobia
-
-
-
+# you know what that is?
+# its the fear of WHAT THE HELL IS THAT ON THE NEXT LINE
