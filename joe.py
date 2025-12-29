@@ -103,3 +103,20 @@ b = f"{action(ifelse(random.random() > 0.5, 'run', a))}{ifelse((random.randint(0
 # oh im glad thats over
 print(b)
 
+# who all is in the Winglets in Wings of Fire arc 2?
+winglets = {
+    "jade": ["Tsunami", "Kinkajou", "Turtle", "Sunny"], # uhhhh you got two right
+    "night": ["Starflight", "Moonwatcher", "Winter"], # wait a night winglet?
+    "sand": ["Clay", "Sandy", "Flame", "Molly"], # A SAND WINGLET?? WHOS MOLLY
+    "sky": ["Starwing", "Frostwhirl", "Riptide", "Dune"], # WHOS STARWING? DO YOU MEAN STAR**FLIGHT**???
+    "sea": ["Coral", "Anemone", "Carnelian", "Indigo"] # WTF I THOUGHT THERE WASNT A SEA WINGLET??
+    "darkstalker": "Darkstalker" # darkstalker is a winglet right?
+}
+
+# whats that
+# that large blob of code coming up
+# is that
+# OH NO
+# NOT MORE SPAGHETTI CODE
+# AAAA
+
