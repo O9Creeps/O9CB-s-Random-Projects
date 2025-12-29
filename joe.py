@@ -29,24 +29,23 @@ class action:
         self.act = act
     
     def __str__(self):
-        match type(self.act):
-            case "str":
-                match self.act: # baldi's basics in education and learning is a really fun game, you should try it.
-                    case "run":
-                        return "you tried to run but your stupid ha ha ha"
-                    case "jump":
-                        return "you are disabled so you cant jump"
-                    #what are you on about, stop tryna add "ha ha ha" to the end of every result.
-                    case "getOut":
-                        return "nuh uh"
-                    case "sleep":
-                        return "no you cant, there are pineapples around."
-                    case _:
-                        return "mate i dont know what your on about"
-            case "stupid":
-                return "oh HELL no man i DONT want your stupid data type, get the FUCK!!!! out"
-            case _:
-                return "what"
+        if type(self.act) is str:
+            match self.act: # baldi's basics in education and learning is a really fun game, you should try it.
+                case "run":
+                    return "you tried to run but your stupid ha ha ha"
+                case "jump":
+                    return "you are disabled so you cant jump"
+                #what are you on about, stop tryna add "ha ha ha" to the end of every result.
+                case "getOut":
+                    return "nuh uh"
+                case "sleep":
+                    return "no you cant, there are pineapples around."
+                case _:
+                    return "mate i dont know what your on about"
+        elif type(self.act) is stupid:
+            return "oh HELL no man i DONT want your stupid data type, get the FUCK!!!! out"
+        else:
+            return "what"
             
 """
 the comments below are AI generated. like wtf
@@ -94,11 +93,13 @@ def ifelse(condition, true_val, false_val):
 
 things = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", "=", "{", "}", "[", "]", "|", ":", ";", "'", "<", ">", ",", ".", "?", "/"]
 a = stupid("stupid test 123")
+print(type(a))
 
 # i have spaghetticodeophobia
 # you know what that is?
 # its the fear of WHAT THE HELL IS THAT ON THE NEXT LINE
-b = f"{action(ifelse(math.random() > 0.5, 'run', a))}{ifelse((random.randint(0, 67) > 41), 'SIX SEVEN!!!', 'aw man :(')}joe{things[random.randint(0, len(things)-1)]}whothehellareyou.mp3"
+b = f"{action(ifelse(random.random() > 0.5, 'run', a))}{ifelse((random.randint(0, 67) > 41), 'SIX SEVEN!!!', 'aw man :(')}joe{things[random.randint(0, len(things)-1)]}whothehellareyou.mp3"
+
 # oh im glad thats over
 print(b)
 
