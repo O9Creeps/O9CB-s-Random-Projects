@@ -5,6 +5,15 @@ import re
 import os
 import sys
 
+# first we got to make a custom data type
+class stupid:
+  __module__ = None
+  def __init__(self, value):
+      self.value = value
+  def __str__(self):
+    return self.value
+# thats really fucking stupid
+
 class customError(Exception):
     def __init__(self, message):
         self.message = message
@@ -31,7 +40,7 @@ class action:
             case "sleep":
                 return "no you cant, there are pineapples around."
             case _:
-                return "mate i dont know what your on about h"
+                return "mate i dont know what your on about"
             # stop adding ha ha ha to everything you do.
             # its annoying.
             # yes it is.
