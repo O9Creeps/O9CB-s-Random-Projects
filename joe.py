@@ -86,7 +86,18 @@ def density(volume, mass):
         raise customError("are you stupid?")
 # joe.
 
+# ok this next one is kinda helpful just go along with it
+def ifelse(condition, true_val, false_val):
+    if condition:
+        return true_val
+    else:
+        return false_val
+
+
+things = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", "=", "{", "}", "[", "]", "|", ":", ";", "'", "<", ">", ",", ".", "?", "/"]
 a = stupid("stupid test 123")
+
 # i have spaghetticodeophobia
 # you know what that is?
 # its the fear of WHAT THE HELL IS THAT ON THE NEXT LINE
+b = f"{action(ifelse(math.random() > 0.5, 'run', a))}{ifelse((math.randint(0, 67) > 41), 'SIX SEVEN!!!', 'aw man :(')}joe{}"
