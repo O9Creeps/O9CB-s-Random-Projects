@@ -30,7 +30,7 @@ class action:
     
     def __str__(self):
         match type(self.act):
-            case str:
+            case "str":
                 match self.act:
                     case "run":
                         return "you tried to run but your stupid ha ha ha"
@@ -43,6 +43,8 @@ class action:
                         return "no you cant, there are pineapples around."
                     case _:
                         return "mate i dont know what your on about"
+            case "stupid":
+                return "oh HELL no man i DONT want your stupid data type, get the FUCK!!!! out"
             case _:
                 return "what"
             # stop adding ha ha ha to everything you do.
@@ -70,4 +72,3 @@ class action:
 # joe.
 
 a = stupid("stupid test 123")
-print(type(a))
