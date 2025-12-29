@@ -47,6 +47,10 @@ class action:
                 return "oh HELL no man i DONT want your stupid data type, get the FUCK!!!! out"
             case _:
                 return "what"
+            
+"""
+the comments below are AI generated. like wtf
+"""
             # stop adding ha ha ha to everything you do.
             # its annoying.
             # yes it is.
@@ -68,6 +72,9 @@ class action:
             #                    - (end of conversation)
             #                     - phew.
             #                      - ha ha ha
+"""
+end ai comments
+"""
 
 # joe.
 
