@@ -1,8 +1,6 @@
 # my name is Joe.
 
 import random
-import re
-import os
 import sys
 import math
 
@@ -100,4 +98,7 @@ a = stupid("stupid test 123")
 # i have spaghetticodeophobia
 # you know what that is?
 # its the fear of WHAT THE HELL IS THAT ON THE NEXT LINE
-b = f"{action(ifelse(math.random() > 0.5, 'run', a))}{ifelse((math.randint(0, 67) > 41), 'SIX SEVEN!!!', 'aw man :(')}joe{}"
+b = f"{action(ifelse(math.random() > 0.5, 'run', a))}{ifelse((random.randint(0, 67) > 41), 'SIX SEVEN!!!', 'aw man :(')}joe{things[random.randint(0, len(things)-1)]}whothehellareyou.mp3"
+# oh im glad thats over
+print(b)
+
