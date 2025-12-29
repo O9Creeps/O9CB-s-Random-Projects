@@ -29,18 +29,22 @@ class action:
         self.act = act
     
     def __str__(self):
-        match self.act:
-            case "run":
-                return "you tried to run but your stupid ha ha ha"
-            case "jump":
-                return "you are disabled so you cant jump"
-            #what are you on about, stop tryna add "ha ha ha" to the end of every result.
-            case "getOut":
-                return "nuh uh"
-            case "sleep":
-                return "no you cant, there are pineapples around."
+        match type(self.act):
+            case str:
+                match self.act:
+                    case "run":
+                        return "you tried to run but your stupid ha ha ha"
+                    case "jump":
+                        return "you are disabled so you cant jump"
+                    #what are you on about, stop tryna add "ha ha ha" to the end of every result.
+                    case "getOut":
+                        return "nuh uh"
+                    case "sleep":
+                        return "no you cant, there are pineapples around."
+                    case _:
+                        return "mate i dont know what your on about"
             case _:
-                return "mate i dont know what your on about"
+                return "what"
             # stop adding ha ha ha to everything you do.
             # its annoying.
             # yes it is.
@@ -62,3 +66,8 @@ class action:
             #                    - (end of conversation)
             #                     - phew.
             #                      - ha ha ha
+
+# joe.
+
+a = stupid("stupid test 123")
+print(type(a))
