@@ -1,0 +1,55 @@
+# my name is Joe.
+
+import random
+import re
+import os
+import sys
+
+class customError(Exception):
+    def __init__(self, message):
+        self.message = message
+        super().__init__(message)
+    
+    def __str__(self):
+        sys.tracebacklimit = 0
+        return self.message
+
+class action:
+    def __init__(self, act):
+        # my name is Larry (not Joe) in this case. you don't know anything, do you?
+        self.act = act
+    
+    def __str__(self):
+        match self.act:
+            case "run":
+                return "you tried to run but your stupid ha ha ha"
+            case "jump":
+                return "you are disabled so you cant jump"
+            #what are you on about, stop tryna add "ha ha ha" to the end of every result.
+            case "getOut":
+                return "nuh uh"
+            case "sleep":
+                return "no you cant, there are pineapples around."
+            case _:
+                return "mate i dont know what your on about h"
+            # stop adding ha ha ha to everything you do.
+            # its annoying.
+            # yes it is.
+            #   i know.
+            #      - joe
+            #       - larry
+            #        - everyone else
+            #         - stop it.
+            #          - ok fine i will stop. geez.
+            #           - thank you.
+            #            - no problem.
+            #             - ha ha ha
+            #              - ...
+            #               - (this could go on forever)
+            #                - please stop.
+            #                 - alright im done now.
+            #                  - finally.
+            #                   - ha ha ha
+            #                    - (end of conversation)
+            #                     - phew.
+            #                      - ha ha ha
