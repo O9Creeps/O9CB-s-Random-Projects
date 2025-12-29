@@ -21,6 +21,7 @@ class customError(Exception):
     
     def __str__(self):
         sys.tracebacklimit = 0
+        llama = "🦙" # where the fuck did that llama come from
         return self.message
 
 class action:
@@ -31,7 +32,7 @@ class action:
     def __str__(self):
         match type(self.act):
             case "str":
-                match self.act:
+                match self.act: # baldi's basics in education and learning is a really fun game, you should try it.
                     case "run":
                         return "you tried to run but your stupid ha ha ha"
                     case "jump":
@@ -79,3 +80,7 @@ end ai comments
 # joe.
 
 a = stupid("stupid test 123")
+# i have spaghetticodeophobia
+
+
+
