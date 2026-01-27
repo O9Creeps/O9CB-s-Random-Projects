@@ -52,9 +52,14 @@ ports_to_scan = [n for n in range(0, 65537)] # added the n for n thingy myself l
 
 print(f"Scanning IP: {target_ip}\n")
 
-for p in ports_to_scan:
-    # Use use_https=True for HTTPS ports (commonly 443)
-    is_https = (p == 443)
-    result = check_http_service(target_ip, p, use_https=is_https)
-    print(f"* {result}")
-    print("-" * 20)
+with open("results.txt", 'w') as file:
+    file.write('')
+
+with open("results.txt", 'w') as file:
+    for p in ports_to_scan:
+        is_https = (p == 443)
+        result = check_http_service(target_ip, p, use_https=is_https)
+        print(f"* {result}")
+        print("-" * 20)
+        file.write(result)
+        file.write("\n")
