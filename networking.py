@@ -48,7 +48,7 @@ def check_http_service(ip_address, port, use_https=False):
 
 # --- Example Usage ---
 target_ip = "192.168.1.1"
-ports_to_scan = [n for n in range(0, 65537)] # added the n for n thingy myself lol
+ports_to_scan = [n for n in range(0, 65536)] # added the n for n thingy myself lol
 
 print(f"Scanning IP: {target_ip}\n")
 
