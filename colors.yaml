@@ -1,0 +1,32 @@
+default: 
+  primary:
+    brightRed: "#FF0000"
+    darkRed: "#A00000"
+    pink: "#FFA0A0"
+    brightGreen: "#00FF00"
+    darkGreen: "#00A000"
+    paleGreen: "#A0FFA0"
+    brightBlue: "#0000FF"
+    darkBlue: "#0000A0"
+    paleBlue: "#A0A0FF"
+  secondary:
+    yellow: "#FFFF00"
+    yellowGray: "#A0A000"
+    paleYellow: "#FFFFA0"
+    brightMagenta: "#FF00FF"
+    purple: "#A000A0"
+    lavender: "#FFA0FF"
+    brightCyan: "#00FFFF"
+    turquoise: "#00A0A0"
+    paleCyan: "#A0FFFF"
+  neutral:
+    white: "#FFFFFF"
+    gray: "#A0A0A0"
+    black: "#000000"
+  others:
+    orange: "#FFC800"
+    brown: "#C08000"
+    skyBlue: "#C080FF"
+
+custom:
+  joe: "#10e10e" # supposed to be 'joejoe'
