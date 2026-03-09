@@ -28,26 +28,48 @@
                 height: 500px;
                 border: 2px solid #ccc;
                 background-color: #f0f0f0;
+                flex: 1;
+                color: #00f
             }
             #movingButton {
                 position: absolute;
-                top: 0px; /* Initial position */
-                left: 0px; /* Initial position */
+                top: 0px; /* init pos */
+                left: 0px; /* INIT POS */
                 padding: 10px 20px;
                 cursor: pointer;
                 background-color: #007bff;
                 color: white;
                 border: none;
                 border-radius: 5px;
-                /* Add the CSS transition for a smooth glide */
+                /* transition for smooth glide */
                 transition: top 0.5s ease-out, left 0.5s ease-out;
             }
         </style>
     </head>
     <body>
-        <div class="game">
+        <div class="container">
             <p>3</p>
         </div>
+        <script>
+            function moveButton() {
+                const button = document.getElementById('movingButton');
+                const container = document.querySelector('.container');
+            
+                // sense bounds
+                const containerWidth = container.clientWidth;
+                const containerHeight = container.clientHeight;
+                const buttonWidth = button.offsetWidth;
+                const buttonHeight = button.offsetHeight;
+
+                // get random pos
+                const randomX = Math.floor(Math.random() * (containerWidth - buttonWidth));
+                const randomY = Math.floor(Math.random() * (containerHeight - buttonHeight));
+
+                // apply pos
+                button.style.left = randomX + 'px';
+                button.style.top = randomY + 'px';
+        }
+        </script>
     </body>
     <footer>
         <small>i have no idea what this is</small>
