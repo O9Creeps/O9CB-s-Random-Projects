@@ -1,5 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>butons</title>
         <style>
             html {
                 background-color: #004422;
@@ -8,16 +12,36 @@
             small {
                 color: #0fffff;
             }
-            body {
+            body, html {
                 display: flex;
                 min-height: 100vh;
                 flex-direction: column;
                 margin-top: auto;
+                overflow: hidden;
             }
             .game {
                 flex: 1;
             }
-
+            .container {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                border: 2px solid #ccc;
+                background-color: #f0f0f0;
+            }
+            #movingButton {
+                position: absolute;
+                top: 0px; /* Initial position */
+                left: 0px; /* Initial position */
+                padding: 10px 20px;
+                cursor: pointer;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                /* Add the CSS transition for a smooth glide */
+                transition: top 0.5s ease-out, left 0.5s ease-out;
+            }
         </style>
     </head>
     <body>
