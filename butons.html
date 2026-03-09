@@ -12,12 +12,14 @@
             small {
                 color: #0fffff;
             }
-            body, html {
+            body {
                 display: flex;
                 min-height: 100vh;
                 flex-direction: column;
                 margin-top: auto;
                 overflow: hidden;
+                justify-content: center; /* Center horizontally */
+                align-items: center;     /* Center vertically */
             }
             .game {
                 flex: 1;
@@ -28,7 +30,6 @@
                 height: 500px;
                 border: 2px solid #ccc;
                 background-color: #f0f0f0;
-                flex: 1;
                 color: #00f
             }
             #movingButton {
@@ -48,7 +49,7 @@
     </head>
     <body>
         <div class="container">
-            <p>3</p>
+            <button id="movingButton" onclick="moveButton()">Click Me</button>
         </div>
         <script>
             function moveButton() {
@@ -68,7 +69,7 @@
                 // apply pos
                 button.style.left = randomX + 'px';
                 button.style.top = randomY + 'px';
-        }
+            }
         </script>
     </body>
     <footer>
