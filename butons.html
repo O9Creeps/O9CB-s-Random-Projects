@@ -49,9 +49,28 @@
     </head>
     <body>
         <div class="container">
-            <button id="movingButton" onclick="moveButton()">Click Me</button>
+            <button id="movingButton" onclick="butonclink(this)">Click Me</button>
         </div>
         <script>
+            function butonclink(clicked) {
+                moveButton(clicked);
+
+                if (math.random() < 0.9) {
+                    newbtn();
+                }
+            }
+            function newbtn() {
+                const container = document.getElementById('container');
+                const newBtn = document.createElement('button');
+                
+                newBtn.className = 'movingButton';
+                newBtn.innerHTML = 'Im your replacement! haha!';
+                
+                newBtn.onclick = function() { butonclink(this); };
+                
+                container.appendChild(newBtn);
+                moveButton(newBtn);
+            }
             function moveButton() {
                 const button = document.getElementById('movingButton');
                 const container = document.querySelector('.container');
