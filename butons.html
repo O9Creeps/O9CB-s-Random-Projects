@@ -29,7 +29,7 @@
                 width: 500px;
                 height: 500px;
                 border: 2px solid #ccc;
-                background-color: #f0f0f0;
+                background-color: #f0f0f077;
                 color: #00f
             }
             #movingButton {
@@ -49,18 +49,19 @@
     </head>
     <body>
         <div class="container">
-            <button id="movingButton" onclick="butonclink(this)">Click Me</button>
+            <button id="movingButton" onclick="butonclink(this)">Clicenk Me</button>
         </div>
         <script>
             function butonclink(clicked) {
                 moveButton(clicked);
 
-                if (math.random() < 0.9) {
+                if (Math.random() < 0.9) {
                     newbtn();
                 }
             }
             function newbtn() {
-                const container = document.getElementById('container');
+                console.warn("what");
+                const container = document.getElementByClassName('container');
                 const newBtn = document.createElement('button');
                 
                 newBtn.className = 'movingButton';
@@ -71,23 +72,22 @@
                 container.appendChild(newBtn);
                 moveButton(newBtn);
             }
-            function moveButton() {
-                const button = document.getElementById('movingButton');
+            function moveButton(btn) {
                 const container = document.querySelector('.container');
             
                 // sense bounds
                 const containerWidth = container.clientWidth;
                 const containerHeight = container.clientHeight;
-                const buttonWidth = button.offsetWidth;
-                const buttonHeight = button.offsetHeight;
+                const buttonWidth = btn.offsetWidth;
+                const buttonHeight = btn.offsetHeight;
 
                 // get random pos
                 const randomX = Math.floor(Math.random() * (containerWidth - buttonWidth));
                 const randomY = Math.floor(Math.random() * (containerHeight - buttonHeight));
 
                 // apply pos
-                button.style.left = randomX + 'px';
-                button.style.top = randomY + 'px';
+                btn.style.left = randomX + 'px';
+                btn.style.top = randomY + 'px';
             }
         </script>
     </body>
