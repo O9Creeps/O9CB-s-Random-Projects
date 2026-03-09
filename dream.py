@@ -15,3 +15,5 @@ dream = player("homeless")
 if dream.homeStatus == "homeless":
     print("oh no")
     dream.die()
+else:
+    print("yay dream has a home")
