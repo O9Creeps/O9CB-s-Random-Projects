@@ -15,7 +15,7 @@ maxstacks = {
 }
 
 class player:
-    def __init__(self, status="has a Home", hp=20, inventory=[[Empty, 1]]):
+    def __init__(self, status="unknown", hp=20, inventory=[[Empty, 1]]):
         self.status = status
         self.hp = hp
         self.inventory = inventory
