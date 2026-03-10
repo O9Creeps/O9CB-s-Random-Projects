@@ -18,7 +18,13 @@ class player:
     def __init__(self, status="has a Home", hp=20, inventory=[[Empty, 1]]):
         self.status = status
         self.hp = hp
+        self.inventory = inventory
+    def check(self):
+        if type(self.inventory) != list:
+            self.inventory = [[Empty, 1]]
+            print(f"{[name for name, val in inspect.currentframe().f_back.f_back.f_locals.items() if val is self][0]}'s inventory has been reset.")
     def attack(self, other):
+        self.check()
         if not isinstance(other, player): return
         other.hp -= r.randint(1, 4)
         if other.hp < 1:
@@ -29,9 +35,9 @@ class player:
         
         for name in keys_to_delete:
             del frame.f_locals[name]
-            print(f"{name} died lmao")
+            print(f"{name} died")
 
-dream = player("homeless")
+dream = player("homeless", 12, 4)
 sapnap = player("homeful")
 
 if dream.status == "homeless":
