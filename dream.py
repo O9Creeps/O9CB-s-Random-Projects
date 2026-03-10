@@ -60,3 +60,4 @@ if dream.status == "homeless":
     sapnap.die(dream)
 else:
     print("yay dream has a home")
+    print("conflict avoided")
