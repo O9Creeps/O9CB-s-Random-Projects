@@ -15,27 +15,36 @@ maxstacks = {
 }
 
 class player:
-    def __init__(self, status="unknown", hp=20, inventory=[[Empty, 1]]):
+    def __init__(self, status="unknown", hp=20, inventory=None):
         self.status = status
         self.hp = hp
-        self.inventory = inventory
+        self.inventory = inventory if inventory is not None else [[Empty, 1]]
+        caller_frame = inspect.currentframe().f_back
+        info = inspect.getframeinfo(caller_frame)
+        line = info.code_context[0].strip()
+        if "=" in line:
+            self.name = line.split("=")[0].strip()
+        else:
+            self.name = "Unknown"
+        print(f"{self.name} joined the game.")
     def check(self):
         if type(self.inventory) != list:
             self.inventory = [[Empty, 1]]
-            print(f"{[name for name, val in inspect.currentframe().f_back.f_back.f_locals.items() if val is self][0]}'s inventory has been reset.")
+            print(f"{self.name}'s inventory has been reset.")
     def attack(self, other):
         self.check()
         if not isinstance(other, player): return
         other.hp -= r.randint(1, 4)
         if other.hp < 1:
-            other.die()
-    def die(self):
-        frame = inspect.currentframe().f_back.f_back
-        keys_to_delete = [name for name, val in frame.f_locals.items() if val is self]
+            other.die(self)
+    def die(self, killer):
+        frame = inspect.currentframe().f_back
+        keys_to_delete = [nam for nam, val in frame.f_locals.items() if val is self]
         
-        for name in keys_to_delete:
-            del frame.f_locals[name]
-            print(f"{name} died")
+        for ki in keys_to_delete:
+            del frame.f_locals[ki]
+            if type(killer) == player: print(f"{killer.name} killed {ki}.")
+            else: print(f"{ki} died.")
 
 dream = player("homeless", 12, 4)
 sapnap = player("homeful")
@@ -48,5 +57,6 @@ if dream.status == "homeless":
     print(f"dream now has {dream.hp} hp")
     if sapnap.hp < dream.hp: print("dream kicked sapnap out of his own home"); dream.status = "homeful"; sapnap.status = "homeless"
     else: print("dream's ahh gets beaten by sapnap, who keeps his home")
+    sapnap.die(dream)
 else:
     print("yay dream has a home")
