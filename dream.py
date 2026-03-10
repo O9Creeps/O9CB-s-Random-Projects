@@ -1,8 +1,21 @@
 import inspect
 import random as r
 
+Empty = object()
+
+
+maxstacks = {
+    "_default": 64,
+    "sword": 1,
+    "range": 1,
+    "tool": 1,
+    "armor": 1,
+    "boat": 1,
+    "Empty": 1
+}
+
 class player:
-    def __init__(self, status="has a Home", hp=20):
+    def __init__(self, status="has a Home", hp=20, inventory=[[Empty, 1]]):
         self.status = status
         self.hp = hp
     def attack(self, other):
