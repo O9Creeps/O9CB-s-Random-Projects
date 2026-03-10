@@ -15,10 +15,10 @@ maxstacks = {
 }
 
 class player:
-    def __init__(self, status="unknown", hp=20, inventory=None):
+    def __init__(self, status="unknown", hp=20):
         self.status = status
         self.hp = hp
-        self.inventory = inventory if inventory is not None else [[Empty, 1]]
+        # self.inventory = inventory if inventory is not None else [[Empty, 1]]
         caller_frame = inspect.currentframe().f_back
         info = inspect.getframeinfo(caller_frame)
         line = info.code_context[0].strip()
@@ -28,9 +28,12 @@ class player:
             self.name = "Unknown"
         print(f"{self.name} joined the game.")
     def check(self):
+        """
         if type(self.inventory) != list:
             self.inventory = [[Empty, 1]]
             print(f"{self.name}'s inventory has been reset.")
+        """
+        pass
     def attack(self, other):
         self.check()
         if not isinstance(other, player): return
@@ -46,7 +49,7 @@ class player:
             if type(killer) == player: print(f"{killer.name} killed {ki}.")
             else: print(f"{ki} died.")
 
-dream = player("homeless", 12, 4)
+dream = player("homeless", 12)
 sapnap = player("homeful")
 
 if dream.status == "homeless":
