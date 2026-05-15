@@ -109,7 +109,7 @@ winglets = {
     "night": ["Starflight", "Moonwatcher", "Winter"], # wait a night winglet?
     "sand": ["Clay", "Sandy", "Flame", "Molly"], # A SAND WINGLET?? WHOS MOLLY
     "sky": ["Starwing", "Frostwhirl", "Riptide", "Dune"], # WHOS STARWING? DO YOU MEAN STAR**FLIGHT**???
-    "sea": ["Coral", "Anemone", "Carnelian", "Indigo"] # WTF I THOUGHT THERE WASNT A SEA WINGLET??
+    "sea": ["Coral", "Anemone", "Carnelian", "Indigo"], # WTF I THOUGHT THERE WASNT A SEA WINGLET??
     "darkstalker": "Darkstalker" # darkstalker is a winglet right?
 }
 
@@ -119,4 +119,3 @@ winglets = {
 # OH NO
 # NOT MORE SPAGHETTI CODE
 # AAAA
-
