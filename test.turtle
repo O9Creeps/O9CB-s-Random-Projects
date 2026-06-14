@@ -1,0 +1,52 @@
+// comment test
+// log str "ignore test"
+
+// optional config
+config {
+x 0
+y 0
+color #00f
+size 4
+hq True
+show True
+}
+
+// how to initialize variables
+init x str "string"
+init y num 42
+
+// logging
+log var y
+warn var y
+err str "joe"
+
+// reassigning values
+re y num 41
+
+log var y
+
+// control
+if (y = 41) {
+penUp
+move 1
+penDown
+move 6
+}
+
+// other functions
+left 7
+right 2
+square 7 True
+dot 7
+dir North
+wait 0.1
+
+// repeat logic and break
+repeat 20 {
+move 1
+right 2
+if (y = 10) {
+break
+}
+re y add 1
+}
