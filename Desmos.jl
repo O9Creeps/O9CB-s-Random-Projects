@@ -1,5 +1,6 @@
 using Desmos
-
+# Desmos
+println("ohio have an idea!")
 state = @desmos begin
     @text "First example"
     @expression cos(x) color=RGB(0, 0.5, 1)
