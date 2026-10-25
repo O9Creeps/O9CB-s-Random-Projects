@@ -49,7 +49,7 @@ class player:
             if type(killer) == player: print(f"{killer.name} killed {ki}.")
             else: print(f"{ki} died.")
 
-dream = player("homeless", 12)
+dream = player("homeless", hp=12)
 sapnap = player("homeful")
 
 if dream.status == "homeless":
